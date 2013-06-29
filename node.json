@@ -1,0 +1,36 @@
+{
+  "user": {
+    "name": "deployer",
+    "password": ""
+  },
+
+  "build_essential":{"compiletime": "true"},
+
+  "environment": "production",
+  "server_name": "",
+  "deploy_to": "/var/www/",
+  "ruby-version": "1.9.3-p286",
+
+  "run_list": [
+    "recipe[build-essential]",
+    "recipe[vim]",
+    "recipe[imagemagick]",
+    "recipe[redis::source]",
+    "recipe[nodejs]",
+    "recipe[ruby_build]",
+    "recipe[rbenv::system]",
+    "recipe[postgresql]",
+    "recipe[database]",
+    "recipe[bluepill]",
+    "recipe[nginx]",
+    "recipe[main]"
+  ],
+  
+  "postgresql": {
+    "version": "9.1",
+    "password": {
+      "postgres": "",
+      "deployer": ""
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# Cheffile
+#!/usr/bin/env ruby
+#^syntax detection
+
+site 'http://community.opscode.com/api/v1'
+
+cookbook 'build-essential'
+cookbook 'nodejs'
+cookbook 'nginx'
+cookbook 'bluepill'
+cookbook 'imagemagick'
+cookbook 'vim'
+cookbook 'ruby_build', :git => 'git://github.com/fnichol/chef-ruby_build.git'
+cookbook 'rbenv', :git => 'git://github.com/fnichol/chef-rbenv.git'
+cookbook 'redis', :git => 'git://github.com/cassianoleal/chef-redis.git'
+cookbook 'postgresql'
+cookbook 'database'
